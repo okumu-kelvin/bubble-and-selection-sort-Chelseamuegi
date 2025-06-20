@@ -1,19 +1,9 @@
 def selection_sort(arr):
-    n = len(arr)
-    for i in range(n-1):
-
+    for i in range(len(arr)-1):
         min_idx = i
-
-        for j in range(i+1, n):
-            if arr[j] < arr[min_idx]:
+        for j in range(i+1, len(arr)):
+            if arr[min_idx] > arr[j]:
                 min_idx = j
         if min_idx != i:
-            arr[j], arr[min_idx] = arr[min_idx], arr[j]
-
+            arr[i], arr[min_idx] = arr[min_idx], arr[i]
     return arr
-
-
-
-
-    # TODO: Implement selection sort
-
